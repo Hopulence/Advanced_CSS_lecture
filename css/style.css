@@ -36,6 +36,16 @@ body {
     
     clip-path: polygon(0  0, 100% 0, 100% 75% , 0 100% ); /* 좌표는 시계방향 */
     /* https://bennettfeely.com/clippy/ - polygon 좌표 시뮬 */
-
+    position: relative;
 
 }   
+
+.logo-box {
+    position: absolute; /* 부모 선택자로부터 상대 위치 참조? */
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px; /* 브라우저에 의해 width는 자동 조정 */
+}
