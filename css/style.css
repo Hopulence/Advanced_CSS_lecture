@@ -49,3 +49,111 @@ body {
 .logo {
     height: 35px; /* 브라우저에 의해 width는 자동 조정 */
 }
+
+/*
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}
+*/
+
+.text-box {
+    position: absolute; 
+    top: 40%; /* parent 선택자 기준(.header) */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /* ??? */
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    /*
+    animation-delay: 3s;  // 3초 후 실행
+    animation-iteration-count: 3;  // 3번 실행
+    */
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    margin-bottom: 60px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link, /* pseudo-class, state selector */
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px; 
+    display: inline-block;
+    transition: all .2s;
+    
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: rgba(255, 255, 255, 0.801);
+    color: rgba(119, 119, 119, 0.801);
+     
+}
